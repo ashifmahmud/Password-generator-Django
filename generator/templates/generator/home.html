@@ -1,0 +1,44 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="generator/generator.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+</head>
+<body class='container text-center'>
+  <h1>Password Generator</h1>
+  <a href="{% url 'about' %}">About</a>
+
+
+<form action="{% url 'password' %}">
+  <select name="length" id="length">
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12" selected="selected">12</option>
+    <option value="13">12</option>
+    <option value="14">12</option>
+ 
+  </select> Length
+  
+    <div class='float-left'>
+      <input type="checkbox" name="uppercase">Uppercase
+    </div>
+    <div>
+      <input type="checkbox" name="numbers">Numbers
+    </div>
+    <div>
+      <input type="checkbox" name="special">Special Characters
+    </div>
+  <input type="submit" value="Generate Password" class="btn btn-primary">
+
+</form>
+</body>
+</html>
